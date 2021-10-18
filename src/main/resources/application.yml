@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    biza-master:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/
+      username: postgres
+      password: 123456
+      maximum-pool-size: 5
+      connection-test-query: 'SELECT 1'
+    biza-slave:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/
+      username: postgres
+      password: 123456
+      maximum-pool-size: 5
+      connection-test-query: 'SELECT 1'
+    bizb:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/tc?useUnicode=true&serverTimezone=Asia/Seoul
+      username: root
+      password: 123456
+      maximum-pool-size: 5
+      connection-test-query: 'SELECT 1'
+
